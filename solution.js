@@ -21,16 +21,16 @@ function passwordCheck(req, res, next) {
 app.use(passwordCheck);
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "./public/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/check", (req, res) => {
   if (userIsAuthorised) {
-    res.sendFile(__dirname + "./public/secret.html");
+    res.sendFile(__dirname + "/secret.html");
   } else {
  console.log(`${req.body["password"]}`);
     
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/index.html");
 
   }
 });
