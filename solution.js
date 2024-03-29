@@ -21,7 +21,7 @@ function passwordCheck(req, res, next) {
 app.use(passwordCheck);
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/public.html");
 });
 
 app.post("/check", (req, res) => {
@@ -30,7 +30,7 @@ app.post("/check", (req, res) => {
   } else {
  console.log(`${req.body["password"]}`);
     
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/public.html");
 
   }
 });
